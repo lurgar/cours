@@ -1,0 +1,6 @@
+.code{
+    color: rgb(0, 0, 0);
+    background-color: darkgray;
+    display: inline-block;/*permet de défenir une largeur et une hauteur sur l'element*/
+    font-style: italic;
+}

@@ -1,0 +1,47 @@
+div{
+   display: grid;
+}
+.nav {
+
+    
+  text-decoration: none;
+    background-color: rgba(96, 138, 11, 0.964);
+	padding: 0; margin: 0;
+    color: white;
+   
+    
+    
+}
+.nav li {
+   
+
+	display: inline;
+	list-style: none; 
+}
+.nav {
+    
+	padding: 0; margin: 0;
+	text-align: left;
+     
+}
+.nav li {
+   
+	display: left;
+	list-style: none;
+     border-left: 2px solid white;
+}
+.nav a {
+    
+	display:left;
+	margin: 0 5px;
+}
+div {
+  display: left;
+  width: 10%;
+  margin: 10;
+}
+
+
+; 
+
+
