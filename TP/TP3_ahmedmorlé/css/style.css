@@ -1,0 +1,152 @@
+
+body{
+
+    font-family:'Caveat Brush', cursive; /*mettre la police */
+}
+.trait{
+    margin-left:10px; /*le mettre à gauche*/
+    width:40px;/*définir la longeur*/
+    background-color:#E53F6F;
+    height: 10px;/*définir l'épaisseur*/
+}
+
+header{ 
+    background:url(../img/woddPlank.jpg);/*mettre la texture du header*/
+    padding: 0;
+    margin: 0;/*mettre une marge interieur*/
+    width: 100%;/*taille du head*/
+    height: 600px;
+
+}
+
+
+
+h1 span {/*header*/
+  font-size: 40px;/*reglage du e */
+  display: inline; /*mettre titre en ligne*/
+  vertical-align: top;
+  position: relative;/*L'élément est positionné dans le flux normal */
+}
+
+h1 span:after {
+  /*header*/
+  top: 15px; 
+  content: "-";
+  position: absolute;
+  left: 0;/*position du "e"*/
+}
+
+
+nav li{
+    
+    list-style: none;/*enlever les puces*/
+    padding: 15px; 
+    display: block;
+    display: inline-block;
+}
+
+nav a{
+text-decoration:none;/*enlever le surlignage*/
+color: black;
+text-transform: uppercase;/*mettre en majuscule*/
+}
+
+nav ul{
+ text-align: right;/*mettre la nav barre à droite*/
+ margin-top: -40px;
+ 
+
+}
+
+
+
+
+
+.container img{
+
+    width: 10%;/*redimmensionnerl'image du cerf*/
+    margin-left: 750px;/*le mettre au milieu*/
+    z-index: 3;
+   
+}
+
+.triangle {
+   width: 0px;
+   height: 0px;
+   border-style: solid;
+   border-width: 0 150px 150px 0;
+   border-color: transparent #E53F6F transparent transparent;
+   transform: rotate(0deg);
+    opacity: 0.8;/*mettre le triangle transparent*/
+   margin-left: 40%;
+   margin-right:45%;
+   margin-top:-10%;/*position du triangle*/
+   margin-bottom: 100%;
+   
+  
+}
+main hr{
+    margin-left:10px; /*le mettre à gauche*/
+    width:40px;/*définir la longeur*/
+    background-color:#E53F6F;
+    height: 10px;/*définir l'épaisseur*/
+
+}
+
+.ourstory{
+    border: 10px;
+     background: white;
+      width: 100%;
+}
+.ourstory h2{
+    text-transform: uppercase;/*mettre en majuscule*/
+    font-size: large;
+}
+
+.ourstory img{
+    float: right;/*mettre l'image à droite*/
+   
+
+}
+
+.ourstory p{
+    text-justify: auto;/*justifier le text*/
+   
+}
+
+.localdistilation h2{
+    text-transform: uppercase;/*mettre le titre en majuscule*/
+    font-size: 20px;
+}
+
+.fare img{
+    width:50%;/*taille de l'image*/
+    float: left;/*mettre à gauche*/
+
+}
+
+.fare h2{
+    
+    
+}
+
+
+
+.fare{
+    text-transform:uppercase;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

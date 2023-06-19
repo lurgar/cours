@@ -1,0 +1,126 @@
+
+body{
+    width: 49%;
+    text-align: center;/*aligner le text*/
+    font-family: 'Cormorant Garamond', serif;/*poice du site*/
+    display: block;
+    margin: auto;
+}
+
+h5{
+    text-transform: uppercase;/*mettre le titre en majuscule*/
+}
+
+h1{
+   text-transform : uppercase;/*mettre le titre en majusucule*/
+}
+hr{
+    width: 300px;/*taille de la barre*/
+}
+
+
+nav li{
+    text-decoration:none;
+    list-style: none;/*enlever les puces*/
+     padding: 20px; 
+     display: block;
+    display: inline-block;
+}
+
+nav a{
+    text-decoration: none;/*enlever l'hyperligne*/
+    color: black;/*mettre une couleur*/
+    font-weight: bold;/*text en gras*/   
+}
+
+.exempleplat{
+text-align: center;
+ text-transform: uppercase;/*mettre le titre en majuscule*/
+color: black;/*mettre une couleur*/
+font-weight: bold;/*text en gras*/
+}
+
+.exemplplat img{
+display: inline;
+float: left;
+height: 320px;
+
+}
+.exempleplat p{
+    color: black;/*mettre une couleur*/
+    font-weight: bold;/*text en gras*/
+}
+
+.Salle h2{
+    text-transform: uppercase;/*mettre le titre en majuscule*/
+    font-weight: bold;/*text en gras*/
+
+}
+
+.Service h2{
+    text-transform: uppercase;/*mettre le titre en majuscule*/
+    font-weight: bold;/*text en gras*/
+}
+.Dressage h2{
+    text-transform: uppercase;/*mettre le titre en majuscule*/
+    font-weight: bold;/*text en gras*/
+}
+
+.Goût h2{
+text-transform: uppercase;/*mettre le titre en majuscule*/
+font-weight: bold;/*text en gras*/
+}
+
+.septime h2{
+    text-transform: uppercase;/*mettre le titre en majuscule*/
+    font-weight: bold;/*text en gras*/
+    
+}
+
+.exempleplat p{
+    color: black;/*mettre une couleur*/
+    
+}
+
+.Salle p{
+    color: black;/*mettre une couleur*/
+font-size: 20px;
+font-style: italic;/*mettre en italique*/
+font-weight: bold;/*text en gras*/
+}
+.Service p{
+    color: black;/*mettre une couleur*/
+    font-size: 20px;
+    font-style: italic;
+    font-weight: bold;/*text en gras*/
+}
+.Dressage p2{
+    color: black;/*mettre une couleur*/
+    font-size: 20px;
+    font-style: italic;
+    font-weight: bold;/*text en gras*/
+}
+
+.Goût p{
+color: black;/*mettre une couleur*/
+font-size: 20px;
+font-style: italic;
+font-weight: bold;/*text en gras*/
+}
+
+.septime p{
+    color: black;/*mettre une couleur*/
+    font-size: 20px;
+   font-style: italic;
+   font-weight: bold;/*text en gras*/
+    
+}
+
+
+
+
+
+
+
+
+
