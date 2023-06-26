@@ -27,4 +27,5 @@ while (nombre != 'quitter') {
     else {
         alert("Erreur entrer un nombre correcte");
     }
+    
 }
