@@ -1,0 +1,52 @@
+.wrapper0, .wrapper1{
+    width: 300px;
+    margin: 0 auto;
+    padding-top: 3vh;
+}
+
+.wrapper2{
+    width: 500px;
+    margin: 0 auto;
+}
+
+div:not(p){
+    color: antiquewhite;
+}
+
+.wrapper{
+    width: 500px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(5, 100px);
+    grid-template-rows: repeat(5, 100px);
+}
+
+.c{
+    background-color: #97d8b2;
+}
+
+div.c{
+    border: 2px solid red;
+}
+
+div.vide{
+    border: 2px solid #0f03f1;
+}
+
+.wrapper0, .wrapper1{
+    display: grid;
+    grid-template-columns: 100px 100px 100px; /* EMMET gtc */
+    grid-template-rows: 100px 100px 100px;
+    grid-gap: 3px;
+}
+
+.wrapper div{
+    background-color: #531253;
+}
+
+div.wrapper1 div:nth-child(1){
+    background-color: #170312;
+    grid-column-start: 1; /* ma 1ére div commence à la 1ére ligne de la grille */
+    grid-column-end: 3;/* ma 1ére div finit à la 1ére ligne de la grille */
+
+}
