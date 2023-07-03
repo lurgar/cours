@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-shop</title>
+
+
+    <!--version de bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <!--css-->
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!--police -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--javascript de bootstrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+
+
+</head>
+
+
+
+<body>
+    <div class="container">
+        <p>satisfait ou remboursé</p>
+
+        <p>besoin d'aide? 0128022945(appel gratuit)</p>
+
+        <p>paiement sécurisé</p>
+    </div>
+    <header>
+        <div class="logo">
+            <img src="img/logo3.png" alt="logo">
+            <em>De l'élègance pour votre habitat !</em>
+        </div>
+
+
+        
+        <div class="pictogramme">
+
+            <div class="devis">
+                <img src="img/devis.png" alt="feuille et stylo">
+                <h6>Devis personalise</h6>
+                <p>Devis gratuits sous 24h</p>
+
+            </div>
+            <div class="compte">
+                <img src="img/compte1.png" alt="un homme et une femme">
+                <h6>Mon compte</h6>
+                <p>Se connecter</p>
+            </div>
+
+            <div class="consiels">
+                <img src="img/conseils.png" alt="pictogramme d'une femme levant le doigt">
+                <h6>Conseils et questions</h6>
+                <p>Rappel automatique gratuit</p>
+            </div>
+
+            <div class="panier">
+                <img src="img/panier.png" alt="pictogramme d'un caddie">
+                <h6>Mon panier</h6>
+                <p>0€-0 produit(s)</p>
+            </div>
+
+        </div>
+        <!--navbar-->
+        <nav class="navbar navbar-expand-lg bg-light me-auto, mb-2, mb-lg-0, me-2">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">acceuil</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">carrelage</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Parquet</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Extérieur</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Mur</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Accessoires</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">pose</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">sanitaire</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">contact</a>
+                        </li>
+
+
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled"></a>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!--carrousel-->
+    <div id="carouselExampleIndicators" class="carousel slide">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="img/slider1.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="img/slider2.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="img/slider3.jpg" class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+
+
+    
+    
+    
+
+    <div class="cards1">
+        <figure>
+            <img src="img/carrelage3.jpg" alt="">
+            <figcaption>voir les carrelages</figcaption>
+        </figure>
+    </div>
+
+
+    <div class="cards2">
+        <figure>
+            <img src="img/carrelage13.jpg" alt="">
+            <figcaption>voir touts les parquets</figcaption>
+        </figure>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+
+    <!--Millieu du site-->
+
+    <div class="millieu">
+        <img src="img/cadenat.png" alt="cadenat">
+        <p>Paiement sécurisé</p>
+
+        <img src="img/anticasse.png" alt="anticasse">
+        <p>Garantie anti-casse</p>
+
+        <img src="img/sourrire.png" alt="sourire">
+        <p>satisfait ou rembourcé</p>
+
+        <img src="img/parquet.png" alt="parquet">
+        <p>echantillon gratuit</p>
+
+        <img src="img/livraison.png" alt="camion de livraison">
+        <p>Paiement sécurisé</p>
+
+        <img src="img/échange.png" alt="flecheechange">
+        <p>echange et retour facile</p>
+
+
+        <img src="img/achat.png" alt="cadenat">
+        <p>facilité de paiement </p>
+
+
+
+    </div>
+
+    <!-- PRESENTATION + PRIX -->
+
+    <div class="presentation">
+        <h3>PRESENTATION</h3>
+        <br>
+        <img src="img/carrelage12.jpg" alt="">
+        <img src="img/carrelage2.jpg" alt="">
+        <img src="img/carrelage11.jpg" alt="">
+        <br>
+        <img src="img/carrelage9.jpg" alt="">
+
+        <img src="img/carrelage10.jpg" alt="">
+        <img src="img/carrelage1.jpg" alt="">
+
+        
+    </div>
+
+
+
+
+</body>
+
+</html>

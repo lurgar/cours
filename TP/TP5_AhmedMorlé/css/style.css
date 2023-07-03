@@ -1,0 +1,105 @@
+header{
+    background-color: antiquewhite;
+     width:100%;
+     padding: 0;
+     margin: 0;
+     margin: auto;
+     
+}
+
+.container{
+    background: grey;/*couleur de la barre d'information*/
+    display: flex;
+	 justify-content: space-around; /*espacer les information*/
+     color: white;/*couleur de la police*/
+}
+
+.logo em  {
+font-weight:bold;/*mettre en gras*/
+    position: relative;
+    left: -230px;
+    top: 110px;
+}
+
+.devis{
+    position: relative;/*pour les déplacer*/
+    top: 1px;
+   left: 750px;
+
+  
+}
+
+
+.compte{
+    position: relative;
+    top: -99px;
+   left: 1000px;
+   
+
+}
+
+.consiels{
+    position: relative;
+    top: -100px;
+   left: 750px;
+
+}
+.panier img{
+    width: 50px/*redimenssionner l'image*/
+}
+
+.panier{
+    
+    position: relative;
+    top: -200px;
+   left: 1000px;
+
+}
+
+.cards1{
+    position: relative;
+    left: 1500px;
+    top: -800px;
+}
+
+
+.cards2{
+    position: relative;
+    left: 1500px;
+    top: -800px;
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid black;
+}
+
+figcaption {
+    background-color: #d738ff;
+    color: #ffffff;
+    padding: 3px;
+    text-align: left;/*alignement du texte*/
+    
+}
+
+
+
+
+.cards1{
+    width: 40%;
+}
+
+
+.carousel{
+    width: 80%;
+}
+
+.millieu{
+    text-transform: uppercase;
+    display: flex;
+    align-items: flex-start;
+}
+
+
+
