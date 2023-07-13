@@ -1,0 +1,189 @@
+*{
+    padding: 0;
+    margin: 0;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+
+
+
+body .container{
+    background: rgb(28, 28, 28);
+}
+
+header{
+     background-image: url(assets/images/background.jpg);
+     background-repeat: repeat-z;
+}
+
+.haut{
+   
+     display: flex;
+
+    
+}
+.logo{
+    align-items: center;
+}
+
+.logo img{
+    width:80%;
+}
+
+.navigateur {
+  display: flex;
+  position: relative;
+  right: -400px;
+  top: -20px; 
+
+}
+
+.navigateur a{
+   display:block; 
+  text-align:center
+  
+}
+
+li{
+  display: inline-block;
+  
+}
+
+ul {
+  list-style:none
+
+}
+
+/*-------------------------------------------------IMAGE--------------------------------*/
+
+.fight img{
+    text-align: center;
+
+}
+.gant{
+  background-color:#ffffff;
+    display: flex;
+    flex-flow: wrap;
+   width: 1000px;
+   margin: 0 auto;
+   padding-bottom: 100px
+}
+
+.gant figcaption{
+    text-align: center;
+    background: white;
+    text-transform: uppercase;
+   
+}
+
+.voirlavente{
+     display: flex;
+    flex-flow: wrap;
+   width: 800px;
+  
+}
+
+.voirlavente button{
+    background-color: rgb(28, 28, 28);
+    position: relative;
+    color: #fff;
+}
+.bt1{
+    position: relative;
+    top: -88px;
+    left: -92px; ;
+}
+.bt2{
+       position: relative;
+    top: -480px;
+    left: -299px;
+} 
+
+.bt3{
+    top: -493px;
+    position: relative;
+
+}
+.bt4{
+ position: relative;
+top: -91px;
+left: -219px;
+}
+.prixbarre{
+    color: grey;
+}
+.prixbarre1{
+   position: relative;
+    top: -107px;
+    left: 433px;
+    text-decoration:line-through;
+}
+.prixbarre2{
+    position: relative;
+    position: relative;
+    top: -127px;
+    right: -900px;
+    text-decoration:line-through;
+}
+.prixbarre3{
+    position: relative;
+    top: -539px;
+    left: 419px;
+    text-decoration:line-through;
+
+}
+.prixbarre4{
+    position: relative;
+    top: -564px;
+    left: 999px;
+}
+
+.prix{
+    color: orange;
+}
+
+.prix1{
+    position: relative;
+    top: -177px;
+    left: 502px;
+
+}
+
+.prix2{
+    position: relative;
+    top: -200px;
+    left: 1200px;
+}
+    
+
+.prix3{
+    position: relative;
+    top: -612px;
+    left: 500px;
+
+    
+}
+.prix4{
+    position: relative;
+    top: -638px;
+    left: 936px;
+    
+}
+
+
+
+footer{
+    width: 500pxpx;
+    background-color: gray;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+
+}
+
+
+
+ 
+
