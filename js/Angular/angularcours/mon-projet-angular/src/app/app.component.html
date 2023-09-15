@@ -1,0 +1,38 @@
+<!-- <div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <h2>Liste</h2>
+      <ul class="list-group">
+        <app-mon-premier-component [persoName]="persoOne" [persoStatus] ="'Présent'"></app-mon-premier-component>
+        <app-mon-premier-component [persoName]="persoTwo" [persoStatus] ="'Absent'"></app-mon-premier-component>
+        <app-mon-premier-component [persoName]="persoThree"[persoStatus] ="'Présent'"></app-mon-premier-component>
+      </ul>
+      <input type="checkbox" [checked]="isAuth" (click)="onClique()">Utilisateur connecté
+    </div>
+  </div>
+ </div>
+-->
+
+<!--<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <h2>Liste</h2>
+      <ul class="list-group">
+        <app-mon-premier-component *ngFor="let element of presenceTab" [persoName]="element.name"
+          [persoStatus]="element.status"></app-mon-premier-component>
+      </ul>
+      <input type="checkbox" [checked]="isAuth" (click)="onClique()"> Utilisateur connecté
+    </div>
+  </div>
+</div>
+
+-->
+<nav>
+  <a class="navbar-brand" routerLink="/">Accueil</a>
+
+  <a class="navbar-brand" routerLink="/presences"> Liste </a>
+
+</nav>
+
+<router-outlet></router-outlet>
+

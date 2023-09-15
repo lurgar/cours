@@ -1,0 +1,126 @@
+body{
+
+    font-family: sans-serif;
+    font-size: 1.5em;
+
+}
+
+.left , .right{
+
+    margin-top: 5em;
+
+}
+
+ul{
+
+    /* Sélectionne toutes les listes <ul> */
+    
+    list-style: none;
+    /* Supression des puces des listes */
+    
+    float: left;
+    /* Effet flottant à gauche */
+    
+    padding: 0;
+    /* marges extérieur */
+    
+    margin: 0;
+    /* marges intérieur */
+
+
+
+}
+
+.left ul{
+
+    margin: 3.2em 0 0 0;
+
+}
+
+.left ul li{
+
+    /* tous les <li> de la liste <ul> ayant la class .left */
+    border-bottom: 1px solid gray;
+    border-left: 1px solid gray;
+    padding: 1em;
+    width: 10em;
+
+
+}
+
+.left ul li:first-child{
+
+    /* premier li de la liste ul ayant la class .left */
+    border-top: 1px solid gray;
+
+
+}
+
+ul.liste li{
+
+    /* tous les <li> de la liste <ul> ayant la class .liste */
+
+    border-left: 1px solid gray;
+
+}
+
+.right .change ul li{
+
+    /* Tous les li> de la liste <ul> ayant la class . change elle meme enfant de la class .right */
+
+    border-top: 1px solid gray;
+    border-right: 1px solid gray;
+    padding: 1em;
+    width: 10em;
+    text-align: center;
+
+
+}
+
+.right .change ul li:first-child{
+
+    /* premier <li> de la liste <ul> aynt la class .change qui elle meme enfant de la class .right */
+
+    background-color: rgb(39, 39, 39);
+    color: rgb(255, 255, 255);
+
+    font-weight: bold;
+    /* Style de la police en gras */
+
+}
+.right .change ul li:last-child{
+    /*dernier <li> de la liste <ul> ayant la class .change , elle même enfant d'une class .right*/
+    border-bottom: 1px solid #ccc;
+}
+/*effet de transition au survol de la souris*/
+.right .change ul:hover{
+    /*au survol de la souris (pseudo -class: hover) on sélectionne la liste <ul> ayant la class .change elle même enfant de la class .right */
+    background: linear-gradient(#2f4336,#b0b07a);
+    cursor: pointer;
+    /*changement de l'affichage avec le curseur*/
+    transform: scale(1.5);/*echelle de zoom*/
+    transition-duration:0.5s ;/*durée de l'effet de transition*/
+}
+
+.right.change ul:hover li:first-child{
+    /*au survol de la souris on selectionne le premier li  de la liste lu ayant la class change, elle même de la class .right*/
+    background-color: black;
+}
+
+.change:hover #premium{
+    color: rgb(0, 102, 255);
+}
+
+.change:hover #silver{
+    color: grey;
+}
+
+.change:hover #gold{
+    color: #FFD700;
+}
+
+.clear{
+
+    clear: both;
+
+}

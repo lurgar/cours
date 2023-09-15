@@ -1,0 +1,44 @@
+body{
+    font-size: 20px;
+    text-align: center;
+    color: aliceblue;
+    text-align: center
+    
+}
+#conteneur{
+    width: 960px;
+    background-color: beige;
+    margin:0 center;
+    border: 400px;
+    color:rgb(51, 14, 216);
+    
+}
+header{
+    background-color: red;
+    width: 960px;
+    height: 70px;
+    text-align: center;
+    line-height:  60px;
+    }
+.ZG{
+    background-color:blue;
+    height: 800px;
+    margin-block-end: auto;
+    writing-mode: vertical-lr;
+    width: 200px;
+
+    
+}
+
+.zone1, .zone2,.zone3.zone4,.zone5{
+    
+    background-color:green;
+    height: 400px;
+    width: 200px;
+    .container {
+    display: flex;
+    margin: 0 10px;
+    flex: 1;
+
+
+}

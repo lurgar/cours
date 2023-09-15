@@ -1,0 +1,64 @@
+body{
+    color: white;
+    font: size 50px;
+
+}
+
+#conteneur{
+    width: 80%;
+    margin: 0 auto;
+    border: 0 solid rgb(225, 0, 0);
+    text-align: center;
+
+}
+header{
+    border: 50px;
+    background-color: #4654;
+    height: 50px;
+    display: center;
+
+}
+
+nav{
+    background-color: #774b4bf6;
+    height: 100px;
+    text-align: center;
+}
+section{
+    background-color: #787746;
+    height: 100px;
+    margin: 0;
+}
+footer{ /* on aurait pu synthétiser le code avec header*/
+    background-color: #ed1616;
+    height: 100px;
+}
+.a{
+    width: 25%;
+    height: 100px;
+    display: block;
+    background-color: rgb(189, 127, 255);
+    border: 20px;
+}
+.b{
+    background-color: #484678;
+    width: 25%;
+    height: 100px;
+    display: block;
+}
+
+
+.c{
+    background-color: #524678;
+    width: 25%;
+    height: 10px;
+    float: right;
+    display: block;
+    
+}
+.d{
+    background-color: #451adf;
+    width: 25%;
+    height: 150px;
+    display: block;
+}

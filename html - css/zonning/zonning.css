@@ -1,0 +1,33 @@
+body{
+    width: 80%;
+    margin: 10px auto;
+}
+#contenu{
+    background-color: rgba(187, 0, 255, 0.525);
+    border: 2px solid #0000;
+
+}
+
+header,footer{
+    height: 80px;
+    background-color: rgb(25, 0, 255);
+    color:#fff
+    text-align:center;
+    padding-top: 6px;/*marge interieur*/
+}
+
+nav{
+height: 40px;
+background-color:#443;
+color: #fff;
+padding-left: 20px;
+}
+section{
+    border: 20px solid #5055;
+    background-color: #4565;
+    height: 500px;
+    text-align:center
+}
+p{
+    margin: 0;
+}

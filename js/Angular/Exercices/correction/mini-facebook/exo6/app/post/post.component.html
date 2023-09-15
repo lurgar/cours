@@ -1,0 +1,8 @@
+<li>
+    <h4>{{ title }}</h4>
+    <p>{{ content }}</p>
+    <button id="like" (click)="onLike()">J'aime</button><button id="nolike" style = "background:#4267b2; color:white;" (click)="onNotLike()">Je n'aime pas</button>
+    <br><br>
+    <textarea placeholder="Ecris ton commentaire ici" [(ngModel)] = "comments"></textarea>
+    <p>COMMENTAIRE : {{ comments }}</p>
+</li>

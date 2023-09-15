@@ -1,0 +1,106 @@
+*{
+
+    font-family: sans-serif;
+    /* Police d'écriture */
+
+
+}
+
+nav{
+
+    background-color: rebeccapurple;
+    padding: 0 0.5em;
+    position: fixed;
+    text-align: center;
+    width: 100%;
+
+    top: 0;
+    /* position à partir du haut de l'écran */
+
+    left: 0;
+    /* position à partir de la gauche de l'écran */
+
+    margin: 0 0 20px;
+
+}
+
+nav a{
+    /* Tous les liens à l'intérieur de la balise nav */
+
+    float: left;
+    /* effet flottant à gauche */
+
+    text-decoration: none;
+    /* pas d'héritage avec effet de souligné comme c'est standard pour les liens sous tous les navigateurs */
+
+    color: aliceblue;
+    /* couleur du texte */
+
+    line-height: 2.7em;
+    /* interligne */
+
+    padding: 0em 2em;
+    /* marges intérieurs - on les faits dans le sens des aiguilles d'une montre */
+
+    font-size: 1.2em;
+    /* taille du texte */
+
+    transition: 1s;
+    /* temps de transaction lors du hover ( survol de la souris ) */
+
+}
+
+nav a:hover{
+    /* Tous les liens au survol dee la souris */
+
+    background-color:aquamarine;
+    /* couleur du fond  */
+
+    color: darkcyan;
+    /* couleur du texte */
+
+    
+
+
+
+}
+/*1er container*/
+.container{
+width: 70%;
+margin: 4% auto 2% auto;
+background-color:  #2146DB;
+padding: 2em;
+}
+
+mark{
+    background-color: #5582;
+}
+/*2ème container*/
+.container1{
+    width: 70%;
+    margin: 2% auto;/*2 % auto 2% auto*/
+    background-color: #2146DB;
+    padding: 2%;
+}
+
+/*container 3 et 4 imbriqués dans le container 1*/
+.container2, .container3{
+    width: 44.5%;
+    background-color: #DBA816;
+    padding: 2%;
+    float: left;
+}
+.container2{
+    margin-right: 1.5%;
+}
+.container3{
+    margin-left: 1.5%;
+}
+/*5ème container*/
+.container4{
+    margin-top: 2em;
+}
+.clear{
+    clear:both
+}
+

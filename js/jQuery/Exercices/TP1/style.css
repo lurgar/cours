@@ -1,0 +1,31 @@
+     body {
+            background-color: #e0e0e040;
+        }
+
+        h1 {
+            font-size: 24px;
+            text-align: center;
+            color: #333;
+        }
+       
+
+        #form {
+            display: flex;
+            justify-content: center;
+        }
+
+        #number {
+            width: 50px;
+            margin-right: 10px;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        button {
+            font-size: 16px;
+            padding: 10px;
+            border: none;
+            background-color: #b04444;
+            color: #ffffff;
+            cursor: pointer;
+        }

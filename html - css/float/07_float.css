@@ -1,0 +1,61 @@
+body{
+    margin: 0 auto;
+    /*
+    margin: 0 auto 0 auto; -> haut droite bas gauche
+    margin:0; 
+    margin:0 auto 1; haut | horizentale | bas
+    */
+    background-color: blanchedalmond;
+}
+
+
+
+
+div{
+    
+    width:90%;
+
+    margin: 0 auto;
+
+    background-color: chocolate;
+
+}
+p{
+    background-color: rgb(255, 0, 0);
+}
+
+p.span{/*sélectionner les span contennu dans le p */
+    background-color: deepskyblue;
+}
+
+.boite{
+    height: 11vh;
+    width: 10vh;
+    padding:5vh;
+    background: url(../float/img/Cat03.jpg);
+    background-repeat: no-repeat;
+    border: 5px double crimson;/*taille, style; couleur de la bordure*/
+    margin: 2vh;
+    float: left;/*effet flottant, permet de placer des balises côte à côte alors que selon le flux du web santard les élèment se places les unes au dessus de l'autre */
+    transition: margin 0.5s;/*propriétée*/
+}
+/* https://outils-css.aliasdmc.fr/unites-de-longueurs-css.php
+        EM: Relative to the parent element
+ 
+        REM: Relative to the root element (HTML tag)
+ 
+        %: Relative to the parent element
+ 
+        VW: Relative to the viewport’s width
+ 
+        VH: Relative to the viewport’s height
+    */
+
+    .boite:hover{
+        /* nom de classe:hover modifie un affichage au survol de la souris*/
+        margin-top:  10vh;;
+    }
+    .clear{
+        clear: both; 
+        /* supprimer l'effet flottant */
+    }

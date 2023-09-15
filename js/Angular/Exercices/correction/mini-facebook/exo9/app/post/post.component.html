@@ -1,0 +1,17 @@
+<li>
+    <h4>{{ title }}</h4>
+    <p>{{ content }}</p>
+
+    <button class="like" (click)="onLike()" [ngClass]="{
+    'show': onlike === true,
+    'hidden': onlike === false}">J'aime</button>
+
+    <button class="nolike" (click)="onLike()" [ngClass]="{
+        'show': notlike === true,
+        'hidden': notlike === false}">Je n'aime pas</button>
+
+    <br><br>
+
+    <textarea placeholder="Ecris ton commentaire ici" [(ngModel)]="comments"></textarea>
+    <p>COMMENTAIRE : {{ comments }}</p>
+</li>

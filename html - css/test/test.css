@@ -1,0 +1,48 @@
+.c1, .c2, .c3{
+ height: 10em;
+    /* h10em */
+
+    width: 50em;
+    /* w10em */
+
+    border: 0.2em solid black;
+    /* bd0.2em */
+    height: 10em;
+    /* h10em */
+
+   ;
+    /* w10em */
+
+    border: 0.30em solid black;
+    /* bd0.2em */
+
+    margin: 0.1em;
+    /* m0.2em */
+
+    float:left;
+    /* fl */
+
+    text-align: left;
+    /* tac */
+    width: 0.5em
+
+    ;
+    font-size: 100%;
+    color: lightblue;
+
+}
+
+.c1{
+    background-color: blue;
+    border-radius: 30%
+     
+    
+}
+.c2{
+    background-color: aqua;
+    border-radius: 50%
+}
+.c3{
+    background-color: brown;
+     border-radius: 20%
+}

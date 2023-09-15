@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" />
+</head>
+
+<body>
+
+    <ion-menu content-id="main-content">
+        <ion-header>
+            <ion-toolbar >
+                <ion-title>menu</ion-title>
+
+            </ion-toolbar >
+        </ion-header>
+        <ion-content class="ion-padding">
+            <ion-item>
+                <ion-label><ion-icon name="home-outline"></ion-icon> Accueil</ion-label>
+            </ion-item>
+             <ion-item>
+            <ion-label><ion-icon name="leaf-outline"></ion-icon> Instant</ion-label>
+            </ion-item>
+            <ion-item>
+             <ion-label><ion-icon name="add-circle-outline"></ion-icon> Ajouter</ion-label>
+            </ion-item>
+
+
+        </ion-content>
+    </ion-menu>
+
+    <div class="ion-page" id="main-content">
+        <ion-header>
+
+            <ion-toolbar color="primary">
+                <ion-buttons slot="start">
+                    <ion-menu-button></ion-menu-button>
+                </ion-buttons>
+                <ion-title>InstantsGram <ion-icon name="camera-outline"></ion-icon> </ion-title>
+
+            </ion-toolbar>
+
+        </ion-header>
+        <ion-content class="ion-padding">
+            <h1>Bienvenue</h1>
+        </ion-content>
+
+    </div>
+
+    <ion-card class="card md hydrated" style="
+    position: relative;
+    top: 25%;
+">
+        <img alt="Silhouette of mountains" src="assest/img/plage.jpeg">
+        <ion-card-header class="ion-inherit-color md hydrated">
+            <ion-card-subtitle role="heading" aria-level="3" class="ion-inherit-color md hydrated">Destination Floride</ion-card-subtitle>
+             <ion-card-title role="heading" aria-level="2" class="ion-inherit-color md hydrated">Miami, us</ion-card-title>
+
+        </ion-card-header>
+
+        <ion-card-content class="md card-content-md hydrated">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae in assumenda et doloremque earum ullam sunt, laborum ipsam fugiat. Nisi.
+        </ion-card-content>
+    </ion-card>
+    <p style="
+    position: relative;
+    top: 300px;
+    left: 25px;
+">Copyright <svg xmlns="http://www.w3.org/2000/svg" height="1em"
+    viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+    <path
+        d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM199.4 312.6c-31.2-31.2-31.2-81.9 0-113.1s81.9-31.2 113.1 0c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9c-50-50-131-50-181 0s-50 131 0 181s131 50 181 0c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0c-31.2 31.2-81.9 31.2-113.1 0z" />
+</svg> instantsGram</p>
+</body>
+
+</html>

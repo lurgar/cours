@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <h2>{{ title }}</h2>
+      <ul class="list-group" style="list-style:none;">
+        <app-post *ngFor="let element of post" [title]="element.title" [content]="element.content" [id]="element.id">
+        </app-post>
+      </ul>
+    </div>
+  </div>
+</div>

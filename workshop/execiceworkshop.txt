@@ -1,0 +1,30 @@
+ <?php
+    $a=2;
+    $b=12;
+    $r=$a+$b;
+Utiliser  l'instruction "echo" afin d'afficher le résultat sous la forme suivante :
+    2+12=14 "by echo"
+    $a+$b=14 "by echo"
+même question  en utilisant l'instruction "print" .
+***********************************************************************
+2. Ecrire un script qui permet d'afficher les mots d'une phrase donnée avec une initiale en majuscule .
+***********************************************************************
+3. Utiliser la fonction "str_pad()" afin de formater l'affichage d'un sommaire composé d'une suite de titres et leurs numéros de page de la façons suivante :
+Exemple d’exécution :
+    Chapitres                          Pages
+    Structures de base.....................1
+    Les classes............................5
+***********************************************************************
+Rédigez le script qui permet d'afficher la chaîne "<ul><li>item1</li><li>item2</li></ul>" telle quelle.
+exo2
+1. Créer et initialiser un tableau $notes avec les valeurs suivantes :
+clé	valeur
+said	13
+badr	16
+najat	15
+2. Ajouter au  tableau la note 10 de l’étudiant "karim".
+3. Supprimer la note de l’étudiant "badr".
+4. Déterminer la note maximale et la note  minimale du groupe.
+5. Afficher le tableau après l'avoir trier  par ordre alphabétique  .
+6. Classer les étudiants  par ordre de mérite et afficher  le tableau.
+7. Déterminer la moyenne de la classe.

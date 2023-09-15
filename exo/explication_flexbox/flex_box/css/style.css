@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-shadow: 0 0 15px black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ---------- HEADER ---------- */
+
+/* DIV .TOP */
+header .top {
+    background: darkred;
+    /* height: 150px; */
+    /* width: 100%; */
+    padding: 20px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+/* le chevron est utiliser pour sélectionner les enfants directe de .top */
+.top>div {
+    background: orange;
+    width: 400px;
+    /* height: 100px; */
+}
+
+.orange {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+header .top .orange div {
+    background: brown;
+    height: 90px;
+    width: 90px;
+    margin: 10px;
+}
+
+/* FIN DIV .TOP */
+
+/* NAV */
+header nav ul {
+    width: 100%;
+
+    display: flex;
+}
+
+header nav ul li {
+    width: 20%;
+    height: 45px;
+    list-style: none;
+    background: chocolate;
+    font-size: 2rem;
+    color: aliceblue;
+
+    display: flex;
+    justify-content: center;
+    /* Justify-content = centre sur axe horizontal (axe X) */
+    align-items: center;
+    /* Align-items = centre sur  axe vertical (Axe Y)*/
+}
+
+/* FIN NAV */
+/* --------- FIN HEADER ----------- */
+
+
+/* -------------- DEBUT CONTAINER ---------------- */
+.container {
+    display: flex;
+}
+
+.container aside {
+    background: purple;
+    width: 20%;
+
+    display: flex;
+    flex-direction: column;
+    /* change la direction de la ligne en colonnes */
+    align-items: center;
+    /* /!\  le flex direction INVERSE les axe X et Y*/
+    justify-content: space-around;
+    /* /!\  le flex direction INVERSE les axe X et Y*/
+    /* height: 100px; */
+}
+
+.container aside div {
+    width: 60%;
+    height: 100px;
+    background: pink;
+}
+
+/* DIV .AQUA */
+.container .aqua {
+    background: aqua;
+    width: 80%;
+    /* height: 100px; */
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.container .aqua div {
+    background: blue;
+    width: 190px;
+    height: 190px;
+    margin: 40px;
+    color: aliceblue;
+    padding: 40px;
+}

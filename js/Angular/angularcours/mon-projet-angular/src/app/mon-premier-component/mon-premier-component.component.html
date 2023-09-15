@@ -1,0 +1,13 @@
+<h2>Liste de présence</h2>
+<li class="list-group-item">
+    <div
+    style="width:20px;height:20px;"
+    [ngStyle]="{background: getColor() }"></div>
+  <p>Etudiant : {{ persoName }} -- Statut : {{ getStatus() }}</p>
+  <!-- <input type="text" class="form-control" [(ngModel)]="persoName"> -->
+  <a routerLink="/presences/{{ student.id }}">
+    Voir fiche :  {{student.id}} - {{student.name}}
+  </a>
+
+
+</li>

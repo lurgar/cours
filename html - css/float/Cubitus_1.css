@@ -1,0 +1,41 @@
+.c1, .c2{
+
+    height: 10em;
+    /* h10em */
+
+    width: 10em;
+    /* w10em */
+
+    border: 0.2em solid black;
+    /* bd0.2em */
+
+    margin: 0.2em;
+    /* m0.2em */
+
+    float: left;
+    /* fl */
+
+    text-align: center;
+    /* tac */
+
+    border-radius: 80%;
+    font-size: 150%;
+    color: lightblue;
+}
+
+.c1{
+
+    background-color: #7140F7;
+}
+
+.c2{
+
+    background-color: #48F7C3;
+
+}
+
+.clear{
+
+    clear: both;
+
+}

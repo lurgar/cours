@@ -1,0 +1,22 @@
+/**<*> étoile select all elements**/
+*{
+    margin: 0;
+
+}
+html, body{
+    height: 100%;
+}
+.conteneur{
+    min-height: 100%;
+}
+header{
+    height: 100px;
+    background-color: #536B34;
+}
+footer{
+    height: 100px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    background-color: #8DB85A;
+}
