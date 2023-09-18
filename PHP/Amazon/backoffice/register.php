@@ -31,6 +31,7 @@ if (!empty($_POST)) {
 
         if ($_POST['password'] == $_POST['repeat_password'] && strlen($_POST['password']) >= 8) {
             extract($_POST);
+            
             $cryptedPassword =md5($password);//on crypte le mdp pour la bdd
             $sqlSelct="SELECT * FROM  user WHERE email = '$email' ";
             //$select 

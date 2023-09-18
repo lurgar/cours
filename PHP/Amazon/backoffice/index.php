@@ -114,7 +114,7 @@ require_once('lib/select_product.php');//requette sql de la table produit
 
             <!--création d'un produit -->
             <li class="nav-item">
-                <a class="nav-link" href="tables.php">
+                <a class="nav-link" href="creation_produit.php">
                 <i class="fas fa-fw fa-table"></i>
                 <span>créer un produit</span></a>
             <!-- Divider -->
