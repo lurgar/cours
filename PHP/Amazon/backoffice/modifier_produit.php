@@ -2,7 +2,7 @@
 session_start();
 // print_r($_SESSION);
 
-if( empty($_SESSION) ){
+if( empty($_SESSION)  ){
     // SI je ne suis pas connecté
     header('Location: login.php');
 
@@ -17,12 +17,9 @@ if( $_SESSION['user_statut'] == 0 ){
 }
 
 
- 
-
-require_once('lib/db.php');             // fichier qui nous donne accès à la BDD
- 
-require_once('../backoffice/lib/product_traitement.php');//fichier qui verifie le formulaire et l'envoi
-
+require_once('lib/db.php');                   // fichier qui nous donne accès à la BDD
+require_once('lib/select_product_by_id.php'); // récupère les informations du produit en question 
+require_once('lib/product_update.php')
 
 
 ?>
@@ -355,7 +352,7 @@ require_once('../backoffice/lib/product_traitement.php');//fichier qui verifie l
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Ajouter un produit</h1> 
+                        <h1 class="h3 mb-0 text-gray-800">Modifier un produit (<?php echo $_GET['idproduit']; ?>)</h1> 
                     </div>
                     
                     <style>
@@ -372,19 +369,22 @@ require_once('../backoffice/lib/product_traitement.php');//fichier qui verifie l
                         <form method='POST' enctype='multipart/form-data'>
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Titre du produit</label>
-                                <input type="text" class="form-control" id="exampleInputEmail1" name="title">
+                                <input type="text" class="form-control" id="exampleInputEmail1" name="title" 
+                                value="<?php echo $product[0]['title']; ?>">
                             </div>
                             
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Prix</label>
-                                <input type="number" class="form-control" id="exampleInputEmail1" name="price">
+                                <input type="number" class="form-control" id="exampleInputEmail1" name="price"
+                                value="<?php echo $product[0]['price']; ?>">
                             </div>
 
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Description</label>
-                                <input type="text" class="form-control" id="exampleInputEmail1" name="description">
+                                <input type="text" class="form-control" id="exampleInputEmail1" name="description"
+                                value="<?php echo $product[0]['description']; ?>">
                             </div> 
-                            
+
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Image</label>
                                 <input type="file" class="form-control" id="exampleInputEmail1" name="image">
@@ -392,15 +392,17 @@ require_once('../backoffice/lib/product_traitement.php');//fichier qui verifie l
 
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Stock</label>
-                                <input type="number" class="form-control" id="exampleInputEmail1" name="stock">
+                                <input type="number" class="form-control" id="exampleInputEmail1" name="stock"
+                                value="<?php echo $product[0]['stock']; ?>">
                             </div>
 
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Réduction</label>
-                                <input type="text" class="form-control" id="exampleInputEmail1" name="discount">
+                                <input type="text" class="form-control" id="exampleInputEmail1" name="discount"
+                                value="<?php echo $product[0]['discount']; ?>">
                             </div>
                             <div class="form-group">
-                                <input type="submit" class="form-control btn-primary" id="exampleInputEmail1" value='Créer'>
+                                <input type="submit" class="form-control btn-primary" id="exampleInputEmail1" value='Mettre à jour'>
                             </div>
                         
                             </div>
@@ -475,4 +477,3 @@ require_once('../backoffice/lib/product_traitement.php');//fichier qui verifie l
 </body>
 
 </html>
-

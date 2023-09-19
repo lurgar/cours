@@ -1,32 +1,13 @@
-<?php 
+
+<?php
 session_start();
-// print_r($_SESSION);
-
-if( empty($_SESSION) ){
-    // SI je ne suis pas connecté
-    header('Location: login.php');
-
-    // ALors, je suis redirigé sur la page login.php (formulaire de connexion)
-
+if(!empty($_SESSION)){
+    header('location:login.php');
 }
-
-if( $_SESSION['user_statut'] == 0 ){
-
-    header('Location: ../index.php');
-
-}
-
-
- 
-
-require_once('lib/db.php');             // fichier qui nous donne accès à la BDD
- 
-require_once('../backoffice/lib/product_traitement.php');//fichier qui verifie le formulaire et l'envoi
-
-
-
+if($_SESSION)
+require_once('lib/db.php');
+require_once('lib/user_produit.php');
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -123,7 +104,7 @@ require_once('../backoffice/lib/product_traitement.php');//fichier qui verifie l
 
             <!-- Création d'un produit -->
             <li class="nav-item">
-                <a class="nav-link" href="creation_produit.php">
+                <a class="nav-link" href="tables.php">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Créer un produit</span></a>
             </li>
@@ -355,63 +336,17 @@ require_once('../backoffice/lib/product_traitement.php');//fichier qui verifie l
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Ajouter un produit</h1> 
-                    </div>
-                    
-                    <style>
-
-                        form{
-                            width:100%;
-                            max-width:400px;
-                            margin: 0 auto;
-                        }
-
-                    </style>
-                        
-                    <div class="container-fluid">
-                        <form method='POST' enctype='multipart/form-data'>
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Titre du produit</label>
-                                <input type="text" class="form-control" id="exampleInputEmail1" name="title">
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Prix</label>
-                                <input type="number" class="form-control" id="exampleInputEmail1" name="price">
-                            </div>
-
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Description</label>
-                                <input type="text" class="form-control" id="exampleInputEmail1" name="description">
-                            </div> 
-                            
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Image</label>
-                                <input type="file" class="form-control" id="exampleInputEmail1" name="image">
-                            </div>
-
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Stock</label>
-                                <input type="number" class="form-control" id="exampleInputEmail1" name="stock">
-                            </div>
-
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Réduction</label>
-                                <input type="text" class="form-control" id="exampleInputEmail1" name="discount">
-                            </div>
-                            <div class="form-group">
-                                <input type="submit" class="form-control btn-primary" id="exampleInputEmail1" value='Créer'>
-                            </div>
-                        
-                            </div>
-                        </form>
+                        <h1 class="h3 mb-0 text-gray-800">PROFILE</h1> 
                     </div>
 
-                   
- 
-                <!-- /.container-fluid -->
+                    <form enctype="multipart/form-data" method="post">
+                        <label for="exampleInputEmail1">Change your profile picture</label>
+                        <input type="file" class="form-control" id="exampleInputEmail1" name="image">
+                        
+                        <button class="btn btn-primary mt-4">Valider</button>
+                    </form>
 
-            </div>
+                </div>
             <!-- End of Main Content -->
 
             <!-- Footer -->
@@ -475,4 +410,3 @@ require_once('../backoffice/lib/product_traitement.php');//fichier qui verifie l
 </body>
 
 </html>
-

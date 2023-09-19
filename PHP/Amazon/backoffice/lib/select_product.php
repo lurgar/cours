@@ -8,7 +8,7 @@ $tableselectProduct=mysqli_query($db_connect,$sqlSelectProduct);//on prépare la
 
 $product= mysqli_fetch_all($tableselectProduct,MYSQLI_ASSOC);
 
-print_r($product);
+// print_r($product);
 
 
 
