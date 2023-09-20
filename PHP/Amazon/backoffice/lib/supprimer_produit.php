@@ -5,7 +5,7 @@
 //requete sql delete
 $sqlSelectProduct="DELETE * FROM `product` WHERE `id_product` = $idproduit";
 
-if(mysqli_query($db_connect,  $sqlSelectProduct)){
+if(mysqli_query($db_connect,$sqlSelectProduct)){
 
     echo'le produit a bien été supprimé';
     header('Location:../index.php');

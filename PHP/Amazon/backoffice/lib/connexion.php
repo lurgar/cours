@@ -30,6 +30,7 @@ if(!empty($email)&& !empty($Password)){
          $_SESSION["user_statut"]  = $user["user_statut"] ;
          $_SESSION["id_user"]  = $user["id_user"] ;
          $_SESSION["date_register"]  = $user["date_register"] ;
+         $_SESSION["image"]= $user["image_user"];//avatar
          
         if($user["user_statut"]==0){
             //uttilisateur

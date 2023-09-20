@@ -17,6 +17,7 @@ header('location: ../index.php');
 
 require_once('lib/db.php');//fichier qui donne accés à la bdd
 require_once('lib/select_product.php');//requette sql de la table produit
+
 ?>
 
 
@@ -309,13 +310,29 @@ require_once('lib/select_product.php');//requette sql de la table produit
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?php echo $_SESSION["firstname"].' '.$_SESSION["lastname"];?></span>
-                                <img class="img-profile rounded-circle"
-                                    src="img/undraw_profile.svg">
+                                <?php
+                                
+
+                                if(!empty($_SESSION['image'])){
+                                    ?>  
+                                    <img class="img-profile rounded-circle"src="img/avatar/<?php echo $_SESSION['image'];?>"?>
+                                    <?php
+                                }else{
+
+                                    ?> 
+                                    <!--image user par defaut-->
+
+                                    <img class="img-profile rounded-circle"src="img/undraw_profile.svg">
+
+                                    <?php
+
+                                }
+                                ?> 
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="#">
+                                <a class="dropdown-item" href="./profil.php">
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Profile
                                 </a>
