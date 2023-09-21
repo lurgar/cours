@@ -4,6 +4,10 @@ session_start();
 require_once('./backoffice/lib/db.php');//fichier qui donne accés à la bdd
 require_once('front.php');//requette sql de la table produit
 
+
+
+
+
 ?>
 
 <!DOCTYPE html>
@@ -33,7 +37,10 @@ require_once('front.php');//requette sql de la table produit
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
                     </ul>
-                    <?php if(empty($_SESSION)){?>
+
+                    <?php 
+                        if(empty($_SESSION)){?>
+
                     <form class="d-flex" style="    margin-right: 10px;">
                         <a class="btn btn-outline-dark" href="backoffice/login.php">
                             <i class="bi-box-arrow-in-right me-1"></i>
@@ -41,6 +48,7 @@ require_once('front.php');//requette sql de la table produit
                     <!-- <span class="badge bg-dark text-white ms-1 rounded-pill">0</span> -->
                         </a>
                     </form>
+
                     <form class="d-flex">
                         <a class="btn btn-outline-dark" href="backoffice/register.php">
                             <i class="bi-file-earmark-diff me-1"></i>
@@ -58,14 +66,18 @@ require_once('front.php');//requette sql de la table produit
                         <?php } ?>
 
                         <?php if(!empty($_SESSION)){
-                        ($_SESSION['user_statut']!=0);{?>
+                        ($_SESSION['user_statut']!=0);{
+                        ?>
+
                           <form class="d-flex"style="margine-left,">
                         <a class="btn btn-outline-dark" href="backoffice/index.php">
                             <i class="bi-file-earmark-diff me-1"></i>
                             Dashboard  
+                            <!-- <span class="badge bg-dark text-white ms-1 rounded-pill">0</span> -->
                              </a>
                              </form>
-                             <?php }
+                             <?php 
+                             }
                         }
                         ?>
                 </div>
@@ -84,20 +96,29 @@ require_once('front.php');//requette sql de la table produit
         <section class="py-5">
             <div class="container px-4 px-lg-5 mt-5">
                 <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+
                 <?php foreach ($product as  $productsingle ) { ?>
+                   <!-- Début Produit --> 
+
                     <div class="col mb-5">
                         <div class="card h-100">
+
                             <!-- Sale badge-->
+                            <?php if( $productsingle['discount'] > 0 ){ ?>
+
                             <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
+                         <?php } ?> 
+
                             <!-- Product image-->
-                            <img class="card-img-top" src="backoffice/img/upload/<?php echo $productsingle['image'];?>" alt="..." />
+                            <img class="card-img-top" src="backoffice/img/upload/
+                            <?php echo $productsingle['image'];?>" alt="..." />
                             
                             <!-- Product details-->
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <!-- Product name-->
 
-                                    <h5 class="fw-bolder"><?php echo $productsingle ['title'];?></h5>
+                                    <h5 class="fw-bolder"> <?php echo $productsingle['title']; ?> </h5>
                                     <!-- Product reviews-->
                                     <div class="d-flex justify-content-center small text-warning mb-2">
                                         <div class="bi-star-fill"></div>
@@ -108,26 +129,24 @@ require_once('front.php');//requette sql de la table produit
                                     </div>
                                     <!-- Product price-->
 
-                                    <?php if($productsingle['discount']>0){?>
+                                    <?php if( $productsingle['discount'] > 0 ) { ?>
                                         
-                                    <span class="text-muted text-decoration-line-through"><?php echo $productsingle['discount'];?></span>
-
-                                    <?php echo $productsingle['price'];?> €
-                                    
+                                        <span class="text-muted text-decoration-line-through"><?php echo $productsingle['price']; ?> €</span>
                                     <?php
                                     
-                                    $prixReduc=$productsingle['price']*$productsingle['discount']/100;
-                                    $prixTotal=$productsingle['price']-$prixReduc;
+                                    $prixReduc = ($productsingle['price'] * $productsingle['discount']) / 100;
+                                    // calcule de la réduction à soustraire
+
+                                    $prixTotal = $productsingle['price'] - $prixReduc;
+                                    // calcule du prix de base - la réduction
+
 
                                     echo $prixTotal;
-                                    ?> 
+                                    ?> €
                                     <?php }else{
-                                    echo $productsingle['price']."€";
-                                    
-                                    }?>
-
+                                    echo $productsingle['price']." €";
                                    
-
+                                    } ?>
 
                                 </div>
                             </div>

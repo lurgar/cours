@@ -1,31 +1,26 @@
-<?php
- require_once("../lib/db.php");
- $idproduit=$_GET['idproduit'];
+<?php 
+require_once('db.php');
 
-//requete sql delete
-$sqlSelectProduct="DELETE * FROM `product` WHERE `id_product` = $idproduit";
+$idproduit = $_GET['idproduit']; // ID du programme
+// 1) requete SQL delete
+$sqlDeleteProduct = "DELETE FROM product WHERE `id_product` = $idproduit";
 
-if(mysqli_query($db_connect,$sqlSelectProduct)){
+ mysqli_query($db_connect, $sqlDeleteProduct);
 
-    echo'le produit a bien été supprimé';
-    header('Location:../index.php');
-}else{
-
- //   redirection sur page dashboard
-}
-
-// redirirection page dashboard
-
-//  $id_user =  $_SESSION['id_user'];
- 
-//  $id_product = $_GET['id_product'];
+    // echo "Le produit a bien été supprimé";
+    header('Location: ../index.php');
 
 
-//petite redirection sur la page d'acceuil du site 
+    // echo "Echec lors de la suppression du produit";
 
 
 
-    // mysqli_query($db_connect,  $sqlUpdate);
+// 2) redirection sur page deashboard
+
+
+
+
+
 
 
 ?>

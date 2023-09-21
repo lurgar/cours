@@ -1,25 +1,23 @@
 <?php
 
 if (!empty($_POST)) {
-    if (!empty($_POST['title']) && !empty($_POST['price']) && !empty($_POST['description']) && !empty($_FILES['image']) && !empty($_POST['stock'])) {
-        $image = $_FILES['image']['name'];
-        extract($_POST);
-        print_r($_POST);
 
-        // $sqlSelectProduct = "SELECT * FROM `product` ";
-        // $tableSelectProduct = mysqli_query($db_connect, $sqlSelectProduct);
-        // $product = mysqli_fetch_all($tableSelectProduct, MYSQLI_ASSOC);
+    extract($_POST);
+    $image = $_FILES['image']['name'];
+    $iduser = $_SESSION['id_user'];
+    $idprd=$_GET['idproduit'];
 
-        echo $idprd;
+    
+    if( !empty($title) && !empty($price) && !empty($stock) && !empty($description) && !empty($image) ){
 
-        $id_user =  $_SESSION['id_user'];
+        $sqlUpdate = "UPDATE `product` SET `title`='$title',`price`='$price',`description`='$description',`stock`= '$stock',`discount`= '$discount' WHERE id_product= $idprd ";
 
-
-        $sqlUpdate = "UPDATE `product` SET `title`='$title',`price`='$price',`description`='$description',`stock`= '$stock',`id_user`='$id_user',`discount`= '$discount' WHERE id_product= $idprd ";
-        echo $sqlUpdate;
         
+
+
         mysqli_query($db_connect,  $sqlUpdate);
     }
+
          $folder = "img/upload/";  
          $imgResult = $folder.$image;
         // "../img/upload/mon_image.jpg"
@@ -42,5 +40,50 @@ if (!empty($_POST)) {
         }
 }
 
+
+// <?php 
+
+// // print_r($_FILES);
+
+// if ( !empty($_FILES) ){
+
+//     $image = $_FILES['image']['name'];
+//     $tmp_name = $_FILES['image']['tmp_name'];
+//     $id_user = $_SESSION['id_user']; // ID de l'utilisateur connecté
+//     $type = $_FILES['image']['type'];
+    
+//     if( $type == "image/jpeg" || $type == "image/png" || $type == "image/webp" ){
+        
+//         $folder = "img/avatar/";
+//         $upload = $folder.$image;
+//         // img/avatar/image.jpg
+
+//         if( move_uploaded_file($tmp_name, $upload) ){
+//             echo "transfert réussi";
+//         }else{
+//             echo "Echec du transfert";
+//         }
+
+//         $sqlUpdateImage = "UPDATE user SET `image_user` = '$image' WHERE `id_user` = $id_user ";
+//         mysqli_query($db_connect, $sqlUpdateImage);
+
+//         $_SESSION['image'] = $image;
+
+
+
+//     }else{
+
+//         echo "Type d'image non pris en charge";
+
+//     }
+
+// }
+
+
+
+
+
+
+?>
 
 ?>
