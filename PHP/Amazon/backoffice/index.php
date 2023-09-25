@@ -370,10 +370,10 @@ require_once('lib/select_product.php');//requette sql de la table produit
                         
                     <div class="row">
                         
-                        <?php foreach ($product as  $productsingle ) {  ?>
+                        <?php foreach ($products as  $productsingle ) {  ?>
                            
                           <div class="col-xl-3 col-md-6 mb-4">
-                            <a href="modifier_produit.php?idproduit=<?php echo $productsingle['id_product'];?>">
+                            <a href="modifier_produit.php?id_product=<?php echo $productsingle['id_product'];?>">
                             <div class="card border-left-success shadow h-100 py-2">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
@@ -389,7 +389,7 @@ require_once('lib/select_product.php');//requette sql de la table produit
                                         </div>
                                         
                                     </div>
-                                    <a style="font-size:15px;" class="text-xs font-weight-bold text-success text-uppercase mb-1" href="modifier_produit.php?idproduit=<?php  print_r($productsingle['id_product']); ?>">Modifier le produit</a> <br>
+                                    <a style="font-size:15px;" class="text-xs font-weight-bold text-success text-uppercase mb-1" href="modifier_produit.php?id_product=<?php  print_r($productsingle['id_product']); ?>">Modifier le produit</a> <br>
                                         <a style="font-size:15px;" class="text-xs font-weight-bold text-danger text-uppercase mb-1" href="lib/supprimer_produit.php?idproduit=<?php print_r($productsingle['id_product']); ?>">Supprimer le produit</a> 
                                 </div>
                             </div>

@@ -1,6 +1,6 @@
 <?php
-$idprd=$_GET['idproduit'];
-$sqlSelectProduct="SELECT * FROM product WHERE `id_product` = $idprd";
+$idprd=$_GET['id_product'];//on va chercher l'info dans l'utl 
+$sqlSelectProductByID="SELECT * FROM product WHERE  `id_product` = $idprd";
 // echo $sqlSelectProduct;
 $sql = "SELECT * FROM `product` WHERE `id_product`=$idprd;";
 //on prépare en string, une requete sql 

@@ -6,7 +6,7 @@ $tableselectProduct=mysqli_query($db_connect,$sqlSelectProduct);//on prépare la
                                                                     //dans une une variable $tableselectProduct
 // echo"coucou";
 
-$product= mysqli_fetch_all($tableselectProduct,MYSQLI_ASSOC);
+$products= mysqli_fetch_all($tableselectProduct,MYSQLI_ASSOC);
 
 // print_r($product);
 

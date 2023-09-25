@@ -22,6 +22,7 @@ require_once('lib/select_product_by_id.php'); // récupère les informations du 
 require_once('lib/product_update.php')
 
 
+
 ?>
 
 <!DOCTYPE html>
@@ -352,7 +353,7 @@ require_once('lib/product_update.php')
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Modifier un produit (<?php echo $_GET['idproduit']; ?>)</h1> 
+                        <h1 class="h3 mb-0 text-gray-800">Modifier un produit (<?php echo $_GET['id_product']; ?>)</h1> 
                     </div>
                     
                     <style>
@@ -402,9 +403,14 @@ require_once('lib/product_update.php')
                                 value="<?php echo $product[0]['discount']; ?>">
                             </div>
                             <div class="form-group">
+                                <label for="exampleInputEmail1">catégorie : 1 = jeux vidéo, 2 = console </label>
+                                <input type="number" class="form-control" id="exampleInputEmail1" name="category"
+                                value="<?php echo $product[0]['id_category']; ?>">
+                            <div class="form-group">
                                 <input type="submit" class="form-control btn-primary" id="exampleInputEmail1" value='Mettre à jour'>
                             </div>
-                        
+                            
+                            </div>
                             </div>
                         </form>
                     </div>

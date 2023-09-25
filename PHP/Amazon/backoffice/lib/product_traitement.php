@@ -6,7 +6,7 @@ if( !empty($_POST) ){
     extract($_POST);
     $image = $_FILES['image']['name'];
 
-    if( !empty($title) && !empty($description) && !empty($price) && !empty($stock)  && !empty($image) ){
+    if( !empty($title) && !empty($description) && !empty($price) && !empty($stock)  && !empty($image)&&!empty($category) ){
 
         $iduser = $_SESSION['id_user']; // le créateur du produit est celui de la session connecté
         // soit, $_SESSION.
@@ -14,9 +14,9 @@ if( !empty($_POST) ){
         $title = str_replace("'", "''", $title);
         $description = str_replace("'", "''", $description);
 
-        $sqlProductInsert = "INSERT INTO product (`title`, `price`, `description`, `image`, `stock`, `id_user`, `discount`) VALUES ('$title','$price','$description','$image','$stock','$iduser','$discount')";
+        $sqlProductInsert = "INSERT INTO product (`title`, `price`, `description`, `image`, `stock`, `id_user`, `discount`,`id_category`) VALUES ('$title','$price','$description','$image','$stock','$iduser','$discount','$category')";//ce qu'il y a en blue est le name
        
-        if( mysqli_query($db_connect, $sqlProductInsert) ){
+        if( mysqli_query($db_connect, $sqlProductInsert)){
             echo "Produit crée";
         }else{
             echo "Echec lors de la création";

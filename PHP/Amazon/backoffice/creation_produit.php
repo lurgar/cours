@@ -2,7 +2,7 @@
 session_start();
 // print_r($_SESSION);
 
-if( empty($_SESSION) ){
+if( empty($_SESSION)  ){
     // SI je ne suis pas connecté
     header('Location: login.php');
 
@@ -17,12 +17,10 @@ if( $_SESSION['user_statut'] == 0 ){
 }
 
 
- 
-
 require_once('lib/db.php');             // fichier qui nous donne accès à la BDD
- 
-require_once('../backoffice/lib/product_traitement.php');//fichier qui verifie le formulaire et l'envoi
-
+// require_once('lib/select_product.php'); // requete SQL SELECT de la table produit
+require_once('lib/product_traitement.php'); //fichier qui vérifie le formulaire et l'envoie
+// require_once('./backoffice/lib/select_category.php');
 
 
 ?>
@@ -123,7 +121,7 @@ require_once('../backoffice/lib/product_traitement.php');//fichier qui verifie l
 
             <!-- Création d'un produit -->
             <li class="nav-item">
-                <a class="nav-link" href="creation_produit.php">
+                <a class="nav-link" href="tables.php">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Créer un produit</span></a>
             </li>
@@ -316,23 +314,7 @@ require_once('../backoffice/lib/product_traitement.php');//fichier qui verifie l
 
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
-                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?php echo ucfirst($_SESSION['firstname'])." ".strtoupper($_SESSION['lastname']) ?></span>
-                                <?php                             
-                                if(!empty($_SESSION['image'])){ ?>  
-                                 <img class="img-profile rounded-circle"src="img/avatar/<?php echo $_SESSION['image'];?>"?>
-                                    <?php
-                                }else{ ?> 
-                                    <!--image user par defaut-->
-
-                                    <img class="img-profile rounded-circle"src="img/undraw_profile.svg">
-
-                                    <?php
-
-                                }
-                                ?> 
-                            </a>
+                        <?php  include_once('composant/avatar.php'); ?>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="userDropdown">
@@ -382,33 +364,42 @@ require_once('../backoffice/lib/product_traitement.php');//fichier qui verifie l
                     <div class="container-fluid">
                         <form method='POST' enctype='multipart/form-data'>
                             <div class="form-group">
-                                <label for="exampleInputEmail1">Titre du produit</label>
-                                <input type="text" class="form-control" id="exampleInputEmail1" name="title">
+                                <label for="titreduproduitInputEmail1">Titre du produit</label>
+                                <input type="text" class="form-control" id="titreduproduitInputEmail1" name="title">
                             </div>
                             
                             <div class="form-group">
-                                <label for="exampleInputEmail1">Prix</label>
-                                <input type="number" class="form-control" id="exampleInputEmail1" name="price">
+                                <label for="prixInputEmail1">Prix</label>
+                                <input type="number" class="form-control" id="prixInputEmail1" name="price">
                             </div>
 
                             <div class="form-group">
-                                <label for="exampleInputEmail1">Description</label>
-                                <input type="text" class="form-control" id="exampleInputEmail1" name="description">
+                                <label for="descriptionInputEmail1">Description</label>
+                                <input type="text" class="form-control" id="descriptionInputEmail1" name="description">
                             </div> 
                             
                             <div class="form-group">
-                                <label for="exampleInputEmail1">Image</label>
-                                <input type="file" class="form-control" id="exampleInputEmail1" name="image">
+                                <label for="imageInputEmail1">Image</label>
+                                <input type="file" class="form-control" id="imageInputEmail1" name="image">
                             </div>
 
                             <div class="form-group">
-                                <label for="exampleInputEmail1">Stock</label>
-                                <input type="number" class="form-control" id="exampleInputEmail1" name="stock">
+                                <label for="stockInputEmail1">Stock</label>
+                                <input type="number" class="form-control" id="stockInputEmail1" name="stock">
                             </div>
 
                             <div class="form-group">
-                                <label for="exampleInputEmail1">Réduction</label>
-                                <input type="text" class="form-control" id="exampleInputEmail1" name="discount">
+                                <label for="reductionInputEmail1">Réduction</label>
+                                <input type="text" class="form-control" id="reductionInputEmail1" name="discount">
+                            </div>
+
+                             <div class="form-group">
+                                <label for="categorieInputEmail1">Catégorie</label>
+                                <select name="category" id="id_category">
+                                    <option value="1">jeux vidéo</option>
+                                    <option value="2">consoles</option>
+                                </select>
+                                
                             </div>
                             <div class="form-group">
                                 <input type="submit" class="form-control btn-primary" id="exampleInputEmail1" value='Créer'>
@@ -486,4 +477,3 @@ require_once('../backoffice/lib/product_traitement.php');//fichier qui verifie l
 </body>
 
 </html>
-

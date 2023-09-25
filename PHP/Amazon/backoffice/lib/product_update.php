@@ -5,12 +5,12 @@ if (!empty($_POST)) {
     extract($_POST);
     $image = $_FILES['image']['name'];
     $iduser = $_SESSION['id_user'];
-    $idprd=$_GET['idproduit'];
+    $idprd=$_GET['id_product'];
 
     
-    if( !empty($title) && !empty($price) && !empty($stock) && !empty($description) && !empty($image) ){
+    if( !empty($title) && !empty($price) && !empty($stock) && !empty($description) && !empty($image) && !empty($category)){
 
-        $sqlUpdate = "UPDATE `product` SET `title`='$title',`price`='$price',`description`='$description',`stock`= '$stock',`discount`= '$discount' WHERE id_product= $idprd ";
+     $sqlUpdate = "SELECT `product` SET `title`='$title',`description`='$description',`image`='$image',`stock`='$stock',`id_user`='$iduser',`discount`='$discount',`id_category`='$category' WHERE  id_product= $idprd ";
 
         
 
