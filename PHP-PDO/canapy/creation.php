@@ -6,7 +6,10 @@
 * License: https://creativecommons.org/licenses/by/3.0/
 */ -->
 
+
 <?php require_once('lib/db.php')?>
+<?php require_once('lib/insert_article.php')?>
+
 
 
 <!doctype html>
@@ -67,13 +70,13 @@
                   <div class="col-6">
                     <div class="form-group">
                       <label class="text-black" for="fname">Titre de l'article</label>
-                      <input type="text" class="form-control" id="fname"name="article">
+                      <input type="text" class="form-control" id="fname" name="title">
                     </div>
                   </div>
                   <div class="col-6">
                     <div class="form-group">
                       <label class="text-black" for="lname">Prix</label>
-                      <input type="number" class="form-control" id="price"name="price">
+                      <input type="number" step='0.01' class="form-control" id="price" name="price">
                     </div>
                   </div>
                 </div>

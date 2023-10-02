@@ -7,7 +7,10 @@
 */ -->
 <?php
 require_once('lib/db.php');
-require_once('lib/select_article.php')
+require_once('lib/select_article_by_id.php');
+
+
+
 ?>
 <!doctype html>
 <html lang="fr">

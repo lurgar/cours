@@ -5,6 +5,9 @@
 * Template URI: https://untree.co/
 * License: https://creativecommons.org/licenses/by/3.0/
 */ -->
+<?php
+require_once('lib/db.php')
+?>
 <!doctype html>
 <html lang="en">
 <head>
