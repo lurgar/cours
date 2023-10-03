@@ -7,7 +7,9 @@
 */ -->
 <?php
 require_once('lib/db.php');
-require_once('lib/select_article.php')
+require_once('lib/class/Article.php');//class Article
+$classArticle = new Article($db);
+$article=$classArticle->selectAll();
 ?>
 <!doctype html>
 <html lang="fr">

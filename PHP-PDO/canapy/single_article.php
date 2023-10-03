@@ -7,9 +7,11 @@
 */ -->
 <?php
 require_once('lib/db.php');
-require_once('lib/select_article_by_id.php');
-
-
+require_once('lib/class/Article.php');
+$id=$_GET['idarticle'];
+$classArticle= new Article($db);
+$article=$classArticle->SelectById($id);
+print_r($article);
 
 ?>
 <!doctype html>
@@ -61,7 +63,7 @@ require_once('lib/select_article_by_id.php');
 		
 	?>
 		<?php
-		include('./components/article.php');
+		include('components\article_by_id.php');
 		?>
 					<!-- End Column 1 -->
 						

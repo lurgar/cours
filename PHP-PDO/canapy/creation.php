@@ -1,14 +1,17 @@
-<!-- /*
-* Bootstrap 5
-* Template Name: Furni
-* Template Author: Untree.co
-* Template URI: https://untree.co/
-* License: https://creativecommons.org/licenses/by/3.0/
-*/ -->
+<?php 
 
+require_once('lib/db.php');
 
-<?php require_once('lib/db.php')?>
-<?php require_once('lib/insert_article.php')?>
+require_once('lib/class/Article.php');
+
+if(!empty($_POST)){
+	if( !empty($_POST['title']) && !empty($_POST['price']) && !empty($_FILES['image'])){ 
+		$classArticle = new Article($db);
+		$classArticle->insert($_POST, $_FILES);
+		// print_r($classArticle);
+	}
+ }
+?>
 
 
 
@@ -34,8 +37,7 @@
 	<body>
 
 		<!-- Start Header/Navigation -->
-		<?php include('components/nav.php')?>
-	
+		<?php include('components/nav.php'); ?>
 		<!-- End Header/Navigation -->
 
 		<!-- Start Hero Section -->
@@ -70,19 +72,19 @@
                   <div class="col-6">
                     <div class="form-group">
                       <label class="text-black" for="fname">Titre de l'article</label>
-                      <input type="text" class="form-control" id="fname" name="title">
+                      <input type="text" class="form-control" name="title">
                     </div>
                   </div>
                   <div class="col-6">
                     <div class="form-group">
                       <label class="text-black" for="lname">Prix</label>
-                      <input type="number" step='0.01' class="form-control" id="price" name="price">
+                      <input type="number" class="form-control" name="price">
                     </div>
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="text-black" for="email">Image de l'article</label>
-                  <input type="file" class="form-control" id="email" name="image">
+                  <input type="file" class="form-control" name="image">
                 </div>
 
                 <div class="form-group mb-5">

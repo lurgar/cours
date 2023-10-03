@@ -1,6 +1,6 @@
 <?php
 
-$current_page=basename($_SERVER['REQUEST_URI']); //savoir dans quel fichier nous sommes (nous sommes dans shop)
+$current_page = basename($_SERVER['REQUEST_URI']); //savoir dans quel fichier nous sommes (nous sommes dans shop)
 ?>
 
 
@@ -14,29 +14,43 @@ $current_page=basename($_SERVER['REQUEST_URI']); //savoir dans quel fichier nous
         </button>
 
         <div class="collapse navbar-collapse" id="navbarsFurni">
-        <ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
-                    <li <?php if($current_page == "index.php"){ echo "class='active'";}?>>
-                        <a class="nav-link" href="index.php">Home</a>
-                    </li>
-                    <li <?php if($current_page == "shop.php"){ echo "class='active'";}?>>
-                        <a class="nav-link" href="shop.php">Shop</a>
-                    </li>
-                    <li <?php if($current_page == "about.php"){ echo "class='active'";}?>>
-                        <a class="nav-link" href="about.php">About us</a>
-                    </li>
-                    <li <?php if($current_page == "creation.php"){ echo "class='active'";}?>>
-                        <a class="nav-link" href="creation.php">Créer un produit</a>
-                    </li>
-                    <li <?php if($current_page == "services.php"){ echo "class='active'";}?>>
-                        <a class="nav-link" href="services.php">Services</a>
-                    </li>
-                    <li <?php if($current_page == "blog.php"){ echo "class='active'";}?>>
-                        <a class="nav-link" href="blog.php">Blog</a>
-                    </li>
-                    <li <?php if($current_page == "contact.php"){ echo "class='active'";}?>>
-                        <a class="nav-link" href="contact.php">Contact us</a>
-                    </li>
-                </ul>
+            <ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
+                <li <?php if ($current_page == "index.php") {
+                        echo "class='active'";
+                    } ?>>
+                    <a class="nav-link" href="index.php">Home</a>
+                </li>
+                <li <?php if ($current_page == "shop.php") {
+                        echo "class='active'";
+                    } ?>>
+                    <a class="nav-link" href="shop.php">Shop</a>
+                </li>
+                <li <?php if ($current_page == "about.php") {
+                        echo "class='active'";
+                    } ?>>
+                    <a class="nav-link" href="about.php">About us</a>
+                </li>
+                <li <?php if ($current_page == "creation.php") {
+                        echo "class='active'";
+                    } ?>>
+                    <a class="nav-link" href="creation.php">Créer un produit</a>
+                </li>
+                <li <?php if ($current_page == "services.php") {
+                        echo "class='active'";
+                    } ?>>
+                    <a class="nav-link" href="services.php">Services</a>
+                </li>
+                <li <?php if ($current_page == "blog.php") {
+                        echo "class='active'";
+                    } ?>>
+                    <a class="nav-link" href="blog.php">Blog</a>
+                </li>
+                <li <?php if ($current_page == "contact.php") {
+                        echo "class='active'";
+                    } ?>>
+                    <a class="nav-link" href="contact.php">Contact us</a>
+                </li>
+            </ul>
 
             <ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
                 <li><a class="nav-link" href="#"><img src="images/user.svg"></a></li>
