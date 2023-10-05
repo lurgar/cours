@@ -44,9 +44,9 @@ print_r($_SESSION);
 								<p><a href="" class="btn btn-secondary me-2">Shop Now</a><a href="#" class="btn btn-white-outline">Explore</a></p>
 							</div>
 						</div>
-						<div class="col-lg-7">
+						<div class="col-lg-6">
 							<div class="hero-img-wrap">
-								<img src="images/couch.png" class="img-fluid">
+								<img src="images/colorful-espresso-machine-logo-coffee-machine-art-sticker-pastel-cute-colors-illustration-of-coffee-maker-colorful-simple-cartoon-style-generative-ai-png.png" class="img-fluid">
 							</div>
 						</div>
 					</div>

@@ -126,7 +126,7 @@ if( !empty($_POST) ){
                                     <input type="email" class="form-control" id="email" name="email">
                                 </div>
                                 <div class="form-group mb-5">
-                                    <label class="text-black" for="password">Password</label>
+                                    <label class="text-black" for="password">Email address</label>
                                     <input type="password" class="form-control" id="password" name="password">
                                 </div>
                                 <input type="submit" class="btn btn-primary-hover-outline" name="formulaire" value="Connexion">

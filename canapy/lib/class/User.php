@@ -34,7 +34,6 @@ Class User{
                 $insertUser->bindParam(':email',$email);
                 $insertUser->bindParam(':password',$cryptedPwd);
                 $insertUser->bindParam(':power', $power);
-            
                 $insertUser->execute();
 
 
@@ -66,7 +65,6 @@ Class User{
             
             $userInfo = $verifUser->fetch(PDO::FETCH_ASSOC); // on récupère le résultat de la requete sql, cette fois ci, sous forme de tableau associatif 
 
-            $_SESSION['id_user'] = $userInfo['id_user'];
             $_SESSION['firstname'] = $userInfo['firstname'];
             $_SESSION['lastname'] = $userInfo['lastname'];
             $_SESSION['email'] = $userInfo['email'];
@@ -77,41 +75,11 @@ Class User{
         }else{
             echo "Mauvais Identifiant";
         }
-        
-    }
-
-    public function addArticle($title, $content)
-    {
-        // Vérifiez si l'utilisateur est connecté
-        if (!isset($_SESSION['user_id'])) {
-            return false;
-        }
-    
-        // Obtenez l'identifiant de l'utilisateur connecté
-        $user_id = $_SESSION['user_id'];
-    
-        // Vérifiez si l'utilisateur est administrateur
-        $query = 'SELECT power FROM user WHERE id_user = :user_id';
-        $stmt = $this->db->prepare($query);
-        $stmt->bindParam(':user_id', $user_id);
-        $stmt->execute();
-    
-        $user = $stmt->fetch(PDO::FETCH_ASSOC);
-        if ($user['power'] != 1) {
-            return false;
-        }
-    
-        // Ajoutez l'article
-        $query = 'INSERT INTO article (title, content) VALUES (:title, :content)';
-        $stmt = $this->db->prepare($query);
-        $stmt->bindParam(':title', $title);
-        $stmt->bindParam(':content', $content);
-        $stmt->execute();
-    
-        return true;
     }
     
 }
+
+
 
 
 

@@ -6,9 +6,12 @@ require_once('lib/class/Article.php'); // execution requete SQL
 $id = $_GET['idarticle'];
 
 $classArticle = new Article($db);
-$article = $classArticle->selectById($id); 
+$article = $classArticle->selectById($id);
+print_r($_SESSION);
+if(!empty($_POST)){
+$classArticle->articleSession($_POST);
 
-
+}
 ?>
 <!doctype html>
 <html lang="fr">
@@ -50,13 +53,14 @@ $article = $classArticle->selectById($id);
 			</div>
 		<!-- End Hero Section -->
 
-		<?php  
+	
+	
+
+	
+
+
+
 		
-			if( isset($error_msg) ){
-				echo $error_msg; 
-			}
-			
-		?>
 
 		<div class="untree_co-section product-section before-footer-section">
 		    <div class="container">
@@ -67,7 +71,13 @@ $article = $classArticle->selectById($id);
 				  <?php include('components/article_by_id.php'); ?>
 				 
 				 
-
+				  <form method="post">
+                        <input type="hidden" name="id_article" value="<?php echo $article['id_article']; ?>">
+                        <input type="hidden" name="title" value="<?php echo $article['title']; ?>">
+                        <input type="hidden" name="price" value="<?php echo $article['price']; ?>">
+                        <input type="hidden" name="image" value="<?php echo $article['image']; ?>">
+                        <input type="submit" value="ajouter au panier">
+                    </form>
 		      	</div> 
 		    </div>
 		</div>

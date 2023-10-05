@@ -1,5 +1,3 @@
-
-
 <?php 
 
 Class Article{
@@ -21,16 +19,16 @@ Class Article{
 
     }
 
-    // public function selectById(GET $id_article ){
+    public function selectById( $id_article ){
         
-    //     $idarticle = $id_article; 
-    //     $select = $this->db->prepare("SELECT * FROM article where `id_article` = :idarticle ");
-    //     $select->bindParam(':idarticle', $idarticle, PDO::PARAM_INT); 
-    //     $select->execute();
-    //     $article = $select->fetch(PDO::FETCH_ASSOC);
-    //     return $article;
+        $idarticle = $id_article; 
+        $select = $this->db->prepare("SELECT * FROM article where `id_article` = :idarticle ");
+        $select->bindParam(':idarticle', $idarticle, PDO::PARAM_INT); 
+        $select->execute();
+        $article = $select->fetch(PDO::FETCH_ASSOC);
+        return $article;
 
-    // }
+    }
 
     public function insert($form, $files){
 
@@ -52,10 +50,21 @@ Class Article{
 
     }
 
+    public function articlesession($form){
+    print_r($form);
+    $_SESSION['orders']=array(
+        $form['id_article']=> array(
+            'title'=> $form['title'],
+            'price'=> $form['price'],
+            'image'=> $form['image'],
+        )
+    );
+    print_r($_SESSION);
+    }
+
 
 
 }
-
 
 
 

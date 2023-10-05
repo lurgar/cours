@@ -10,7 +10,6 @@ if( !empty($_POST) ){
 		$classArticle->insert($_POST, $_FILES);
 
 	}
-	
 }
 
 

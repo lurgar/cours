@@ -74,7 +74,7 @@ $articles = $classArticle->selectAll(); // tous les produits
 			<div class="container relative">
 
 				<div class="sofa-img">
-					<img src="images/sofa.png" alt="Image" class="img-fluid">
+					<img src="images/berade.jpg" alt="Image" class="img-fluid">
 				</div>
 
 				<div class="row">
