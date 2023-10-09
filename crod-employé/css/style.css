@@ -1,0 +1,56 @@
+table {
+    width: 100%;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+  }
+  
+  th, td {
+    text-align: center;
+    padding: 80px;
+  }
+  
+  .btn {
+    margin-right: 10px;
+    padding: 10px;
+  }
+  
+  th {
+    background-color: #ccc;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #000;
+  }
+  
+  .btn-success {
+    background-color: #008000;
+    color: #fff;
+  }
+  
+  .btn-warning {
+    background-color: #ffc107;
+    color: #fff;
+  }
+  
+  .btn-danger {
+    background-color: #dc3545;
+    color: #fff;
+  }
+
+  .container h1{
+text-align: center;
+  }
+.voir{
+    text-align: center;
+}
+.modif{
+    text-align: center;
+}
+.supp{
+    text-align: center;
+}
+
+.container h1{
+text-align: center;
+}
