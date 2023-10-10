@@ -64,7 +64,7 @@ Class User{
         if( $nb_ligne == 1 ){
             
             $userInfo = $verifUser->fetch(PDO::FETCH_ASSOC); // on récupère le résultat de la requete sql, cette fois ci, sous forme de tableau associatif 
-
+            $_SESSION['id_user'] = $userInfo['id_user'];
             $_SESSION['firstname'] = $userInfo['firstname'];
             $_SESSION['lastname'] = $userInfo['lastname'];
             $_SESSION['email'] = $userInfo['email'];
@@ -76,7 +76,11 @@ Class User{
             echo "Mauvais Identifiant";
         }
     }
-    
+    public function logout(){
+        session_unset();
+        session_destroy();
+        header('Location: index.php');
+    }
 }
 
 

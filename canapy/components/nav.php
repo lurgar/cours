@@ -48,6 +48,7 @@ $current_page = basename( $_SERVER['REQUEST_URI'] ); // shop.php
         <ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
             <li><a class="nav-link" href="register.php"><img src="images/user.svg"></a></li>
             <li><a class="nav-link" href="cart.php"><img src="images/cart.svg"></a></li>
+            <li><a class="nav-link" href="deconnexion.php">deconnexion</a></li>
         </ul>
     </div>
 </div>

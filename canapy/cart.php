@@ -1,10 +1,21 @@
-<!-- /*
-* Bootstrap 5
-* Template Name: Furni
-* Template Author: Untree.co
-* Template URI: https://untree.co/
-* License: https://creativecommons.org/licenses/by/3.0/
-*/ -->
+<?php
+require_once('lib/db.php');
+require_once('lib/class/Article.php');
+require_once('lib/class/User.php');
+require_once('lib/class/Orders.php');
+// print_r($_SESSION);
+
+$cart = new Orders($db);
+
+if(!empty($_POST)){
+  $cart->deleteOrder($_POST);
+}
+$carts = $cart-> selectAll($_SESSION);
+
+// print_r($_POST);
+
+
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -27,7 +38,7 @@
 	<body>
 
 		<!-- Start Header/Navigation -->
-		<?php include('components/nav.php'); ?>
+	<?php  include('components/nav.php');?>
 		<!-- End Header/Navigation -->
 
 		<!-- Start Hero Section -->
@@ -66,14 +77,17 @@
                         </tr>
                       </thead>
                       <tbody>
+                       
+					<?php  if( !empty($_SESSION) ){?>
+                        <?php foreach($carts as $articles ){ ?>
                         <tr>
                           <td class="product-thumbnail">
-                            <img src="images/product-1.png" alt="Image" class="img-fluid">
+                            <img src="images/upload/<?php echo $articles['image'];?>" alt="Image" class="img-fluid">
                           </td>
                           <td class="product-name">
-                            <h2 class="h5 text-black">Product 1</h2>
+                            <h2 class="h5 text-black"><?php echo $articles['title'];?></h2>
                           </td>
-                          <td>$49.00</td>
+                          <td><?php echo $articles['price'];?></td>
                           <td>
                             <div class="input-group mb-3 d-flex align-items-center quantity-container" style="max-width: 120px;">
                               <div class="input-group-prepend">
@@ -86,33 +100,25 @@
                             </div>
         
                           </td>
-                          <td>$49.00</td>
-                          <td><a href="#" class="btn btn-black btn-sm">X</a></td>
-                        </tr>
-        
-                        <tr>
-                          <td class="product-thumbnail">
-                            <img src="images/product-2.png" alt="Image" class="img-fluid">
-                          </td>
-                          <td class="product-name">
-                            <h2 class="h5 text-black">Product 2</h2>
-                          </td>
-                          <td>$49.00</td>
+                          <td><?php echo $articles['price'];?></td>
                           <td>
-                            <div class="input-group mb-3 d-flex align-items-center quantity-container" style="max-width: 120px;">
-                              <div class="input-group-prepend">
-                                <button class="btn btn-outline-black decrease" type="button">&minus;</button>
-                              </div>
-                              <input type="text" class="form-control text-center quantity-amount" value="1" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
-                              <div class="input-group-append">
-                                <button class="btn btn-outline-black increase" type="button">&plus;</button>
-                              </div>
-                            </div>
-        
+                            <form method="post">
+                              <input type="submit" name="deleteorder"  value="X"> 
+                              <input type="hidden" name="id_orders" value="<?php echo $articles['id_order'];?>">
+                            </form>
                           </td>
-                          <td>$49.00</td>
-                          <td><a href="#" class="btn btn-black btn-sm">X</a></td>
-                        </tr>
+						                          </tr>
+
+                      	<?php } ?>
+
+					<?php }else {
+						
+						// header('Location: inscription.php');
+
+					}
+						
+					?>
+
                       </tbody>
                     </table>
                   </div>
@@ -125,8 +131,10 @@
                     <div class="col-md-6 mb-3 mb-md-0">
                       <button class="btn btn-black btn-sm btn-block">Update Cart</button>
                     </div>
+
                     <div class="col-md-6">
-                      <button class="btn btn-outline-black btn-sm btn-block">Continue Shopping</button>
+                      <a class="btn btn-outline-black btn-sm btn-block" href="shop.php">Continue Shopping</a>
+                      
                     </div>
                   </div>
                   <div class="row">

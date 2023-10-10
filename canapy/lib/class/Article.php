@@ -52,15 +52,13 @@ Class Article{
 
     public function articlesession($form){
     print_r($form);
-    $_SESSION['orders']=array(
-        $form['id_article']=> array(
-            'title'=> $form['title'],
-            'price'=> $form['price'],
-            'image'=> $form['image'],
-        )
-    );
-    print_r($_SESSION);
+    // $form=$_POST(formulaire caché)
+          if(!array_key_exists('orders',$_SESSION)){
+            $_SESSION['orders']=array();
     }
+    $_SESSION['orders'] = array_merge($_SESSION['orders'],array($form));
+    print_r($_SESSION);
+}
 
 
 

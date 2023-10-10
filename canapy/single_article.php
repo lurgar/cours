@@ -2,15 +2,16 @@
 
 require_once('lib/db.php'); 			// connexion à la base de donnée
 require_once('lib/class/Article.php'); // execution requete SQL
-
+require_once('lib/class/orders.php');
 $id = $_GET['idarticle'];
 
 $classArticle = new Article($db);
 $article = $classArticle->selectById($id);
+$classOrders=new Orders($db);
 print_r($_SESSION);
 if(!empty($_POST)){
-$classArticle->articleSession($_POST);
-
+// $classArticle->articleSession($_POST);
+	$classOrders->NewOrder($_POST,$_SESSION);
 }
 ?>
 <!doctype html>
